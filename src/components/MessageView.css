@@ -1,0 +1,14 @@
+.message-view {
+	position: relative;
+}
+
+.message-view > img {
+	cursor: pointer;
+}
+
+.message-view__timer {
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin: 10px;
+}

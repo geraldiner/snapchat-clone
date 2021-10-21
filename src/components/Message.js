@@ -30,7 +30,8 @@ const Message = ({ id, username, timestamp, imageUrl, read, profilePic }) => {
 			<div className="message__info">
 				<h4>{username}</h4>
 				<p>
-					Tap to view - <ReactTimeago date={new Date(timestamp).toUTCString()} />
+					{!read && "Tap to view - "}
+					<ReactTimeago date={new Date(timestamp).toUTCString()} />
 				</p>
 			</div>
 
