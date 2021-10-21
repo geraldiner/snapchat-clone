@@ -16,6 +16,7 @@
 .messages__avatar {
 	height: 25px !important;
 	width: 25px !important;
+	cursor: pointer;
 }
 
 .messages__search {
@@ -56,4 +57,27 @@
 .messages__wrapper {
 	-ms-overflow-style: none;
 	scrollbar-width: none;
+}
+
+.messages__takePicIcon {
+	position: absolute;
+	background-color: white;
+	border-radius: 200px;
+	color: gray;
+	font-size: 40px;
+	cursor: pointer;
+	bottom: 0;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.messages__takePicIcon:hover {
+	opacity: 0.8;
+}
+
+.messages__searchIcon,
+.messages__chatIcon {
+	color: white;
+	cursor: pointer;
+	font-size: 16px !important;
 }

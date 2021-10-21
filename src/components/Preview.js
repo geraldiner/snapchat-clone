@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useHistory } from "react-router";
 import { v4 as uuid } from "uuid";
+import { selectUser } from "../features/appSlice";
 import { selectCameraImage, resetCameraImage } from "../features/cameraSlice";
 import { Close, TextFields, Create, Note, MusicNote, AttachFile, Crop, Timer, Send } from "@mui/icons-material";
 import { collection, addDoc } from "firebase/firestore";
@@ -14,6 +15,7 @@ const Preview = () => {
 	const cameraImage = useSelector(selectCameraImage);
 	const history = useHistory();
 	const dispatch = useDispatch();
+	const user = useSelector(selectUser);
 
 	useEffect(() => {
 		if (!cameraImage) {
@@ -35,9 +37,9 @@ const Preview = () => {
 					const timeCreated = await (await getMetadata(storageRef)).timeCreated;
 					await addDoc(collection(db, "photos"), {
 						imageUrl: downloadURL,
-						username: "Mr. Meeseeks",
+						username: user.username,
 						read: false,
-						// profilePic,
+						profilePic: user.profilePic,
 						timestamp: timeCreated,
 					});
 					history.push("/messages");
