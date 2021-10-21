@@ -30,18 +30,17 @@ const Preview = () => {
 		const storageRef = ref(storage, `photos/${id}`);
 		try {
 			const uploadTask = await uploadString(storageRef, cameraImage, "data_url");
-			console.log(uploadTask);
 			getDownloadURL(uploadTask.ref).then(async downloadURL => {
-				console.log("File available at", downloadURL);
 				try {
 					const timeCreated = await (await getMetadata(storageRef)).timeCreated;
-					const docRef = await addDoc(collection(db, "photos"), {
+					await addDoc(collection(db, "photos"), {
 						imageUrl: downloadURL,
 						username: "Mr. Meeseeks",
 						read: false,
 						// profilePic,
 						timestamp: timeCreated,
 					});
+					history.push("/messages");
 				} catch (error) {
 					console.log(error);
 				}
@@ -49,10 +48,6 @@ const Preview = () => {
 		} catch (error) {
 			console.log(error);
 		}
-		// Register three observers:
-		// 1. 'state_changed' observer, called any time the state changes
-		// 2. Error observer, called on failure
-		// 3. Completion observer, called on successful completion
 	};
 
 	return (

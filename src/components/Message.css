@@ -1,0 +1,35 @@
+.message {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 8px;
+	border-bottom: 1px solide whitesmoke;
+	cursor: pointer;
+}
+
+.message:hover {
+	opacity: 0.8;
+}
+
+.message__avatar {
+	height: 35px !important;
+	width: 35px !important;
+}
+
+.message__readIcon {
+	color: crimson;
+}
+
+.message__info {
+	padding-left: 5px;
+	flex: 1;
+}
+
+.message__info > h4 {
+	font-size: 11px;
+	font-weight: 500;
+}
+
+.message__info > p {
+	font-size: 9px;
+}
