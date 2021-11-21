@@ -22,6 +22,7 @@ The frontend uses React, which I am more comfortable with. It also uses Redux fo
 
 This app was really cool because it uses the person's webcam to take photos and store them in a database online. It then generates a feed with all those photos. ...(Un)fortunately, for me, all the photos are just of me (lol), but in the video tutorial, there were people from all over the world logging in to showcase their photos. I thought that was really cool and makes me excited about building new things.
 
+
 ## Other Projects
 
 Check out other stuff I've worked on:
@@ -33,5 +34,3 @@ Check out other stuff I've worked on:
 **Snapchat Clone:** https://github.com/geraldiner/snapchat-clone
 
 **K.K. Radio:** https://github.com/geraldiner/kk-radio
-
-**Interactive Piano:** https://github.com/geraldiner/piano
