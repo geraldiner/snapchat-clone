@@ -35,6 +35,7 @@ This app was really cool because it uses the person's webcam to take photos and 
 
 
 
+
 ## Other Projects
 
 Check out other stuff I've worked on:
